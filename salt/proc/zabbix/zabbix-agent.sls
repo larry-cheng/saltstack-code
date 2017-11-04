@@ -24,5 +24,6 @@ zabbix-agent-conf:
     - template: jinja
     - default:
       Server: 192.168.56.11
+      AgentHost: {{ grains['fqdn'] }}
     - require:
       - pkg: zabbix-agent-install
